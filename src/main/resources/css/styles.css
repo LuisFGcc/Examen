@@ -1,0 +1,42 @@
+.text-field-error {
+    -fx-border-color: red;
+    -fx-border-width: 2;
+
+    .button-primary {
+        -fx-background-color: #2196F3;
+        -fx-text-fill: white;
+    }
+
+    .button-primary:hover {
+        -fx-background-color: #1976D2;
+    }
+
+    .button-danger {
+        -fx-background-color: #F44336;
+        -fx-text-fill: white;
+    }
+
+    .button-danger:hover {
+        -fx-background-color: #D32F2F;
+    }
+
+    .table-view {
+        -fx-background-color: transparent;
+    }
+
+    .table-view .column-header {
+        -fx-background-color: #2196F3;
+        -fx-text-fill: white;
+    }
+
+    .text-field, .text-area {
+        -fx-background-radius: 4;
+        -fx-border-radius: 4;
+        -fx-border-color: #BDBDBD;
+        -fx-border-width: 1;
+    }
+
+    .text-field:focused, .text-area:focused {
+        -fx-border-color: #2196F3;
+    }
+}

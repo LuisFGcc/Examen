@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" prefWidth="1000" prefHeight="700"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pe.edu.upeu.sysalmacenfx.controller.ComputadoraController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20"/>
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="NEVER" minWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <!-- Primera fila -->
+        <Label text="Marca:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="marcaField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Modelo:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <TextField fx:id="modeloField" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <!-- Segunda fila -->
+        <Label text="Precio:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="precioField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Stock:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="stockField" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+        <!-- Tercera fila -->
+        <Label text="Procesador:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="procesadorField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="RAM (GB):" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <TextField fx:id="ramField" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+        <!-- Cuarta fila -->
+        <Label text="Almacenamiento:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="almacenamientoField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <!-- Quinta fila -->
+        <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextArea fx:id="descripcionArea" wrapText="true" prefRowCount="3"
+                  GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="guardarButton" text="Guardar" onAction="#handleGuardar"
+                styleClass="button-primary"/>
+        <Button fx:id="limpiarButton" text="Limpiar" onAction="#handleLimpiar"/>
+        <Button fx:id="eliminarButton" text="Eliminar" onAction="#handleEliminar"
+                disable="true" styleClass="button-danger"/>
